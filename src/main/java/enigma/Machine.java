@@ -1,5 +1,6 @@
 package enigma;
 
+/**/
 public class Machine {
 
 	private Rotor leftRotor;
@@ -7,13 +8,14 @@ public class Machine {
 	private Rotor rightRotor;
 	private Reflector reflector;
 
+	 /*fonction qui initialise les rotors*/
 	public void initRotors(Reflector reflector, Rotor left, Rotor middle, Rotor right) {
 		this.reflector = reflector;
 		leftRotor = left;
 		middleRotor = middle;
 		rightRotor = right;
 	}
-
+  /*fonction qui remplace  les paramètres du routeur*/
 	public void setPositions(String setting) {
 		char[] charSettings = setting.toCharArray();
 		reflector.setPosition(Rotor.toIndex(charSettings[0]));
@@ -22,12 +24,13 @@ public class Machine {
 		rightRotor.setPosition(Rotor.toIndex(charSettings[3]));
 	}
 	
+	/* celle-ci est la fontion qui configure les elemenets de la machine */
 	public void configure(Reflector reflector, Rotor left, Rotor middle, Rotor right, String setting) {
 		this.initRotors(reflector, left, middle, right);
 		this.setPositions(setting);
 
 	}
-
+       /**/
 	public String convert(String msg) {
 		msg = msg.toUpperCase();
 		char[] msgChars = msg.toCharArray();
@@ -53,6 +56,7 @@ public class Machine {
 
 	}
 
+		/* fonction qui deplacent les elements de la machine*/
 	void advanceRotors() {
 		boolean advanceLeft = false;
 		boolean advanceMiddle = false;

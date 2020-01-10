@@ -3,6 +3,7 @@ package enigma;
 /** Class that represents a reflector in the enigma.
  *  @author
  */
+
 public class Reflector extends Rotor {
 	
 	int[] reflection;
@@ -29,7 +30,7 @@ public class Reflector extends Rotor {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+    @Override /**/
     public void advance() {
     }
 

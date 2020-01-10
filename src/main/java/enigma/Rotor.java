@@ -12,6 +12,7 @@ public class Rotor {
         return position;
     }
 
+    /*fonction qui remplace la position d'un element de la machine*/
     public void setPosition(int posn) {
         position = posn;
     }
@@ -55,7 +56,7 @@ public class Rotor {
     public int convertBackward(int e) {
         return ((bcipher[((e+position)%26+26)%26]-position)%26+26)%26;
     }
-    
+    /*fonction qui crée les deplacements du routeur*/
     public void advance() {
         position = (position+1) % 26;
     }
@@ -71,7 +72,7 @@ public class Rotor {
     protected static int toIndex(char c) {
         return c - 'A';
     }
-    
+     /*fonction qui crée le déchicffrement*/
 	private void createBCipher() {
 		for(int i =0; i<26; i++)
 			bcipher[cipher[i]] = i;
