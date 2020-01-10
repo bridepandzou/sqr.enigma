@@ -13,16 +13,21 @@ Code for the German Enigma machine used in WW2.
 - that ends
 
 ## Functions to be tested
-Hereafter, for each classes give function to be tested 
+Hereafter, for each classes give function to be tested
 
 ### Classe Machine
 #### functions
+-public String convert(String msg)
+-char convertChar(char c)
 
 ### Classe Reflector
 #### function
+-public int convertForward(int p)
 
 ### Classe Rotor
 #### function
+-public int convertForward(int p)
+-public int convertBackward(int e)
 
 ## Tricks & tips
 
